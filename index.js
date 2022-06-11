@@ -12,5 +12,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const newTutorial = [];
+  tutorials.map(item =>{
+    const aRRay = item.split(" ");
+    for (let i=0; i < aRRay.length; i++){
+      aRRay[i] = aRRay[i].charAt(0).toUpperCase() + aRRay[i].slice(1)
+    }
+    const aRRay2 = aRRay.join("");
+    newTutorial.push(aRRay2);
+  })
+  return newTutorial;
 }
